@@ -1,3 +1,4 @@
+import 'package:aplikasipemob/screens/calculator.dart';
 import 'package:aplikasipemob/screens/login_screen.dart';
 import 'package:aplikasipemob/screens/signup_screen.dart';
 import 'package:flutter/material.dart';
@@ -14,22 +15,7 @@ class WelcomeScreen extends StatelessWidget {
       padding: const EdgeInsets.all(10),
       child: Column(
         children: [
-          const SizedBox(height: 15),
-          Align(
-              alignment: Alignment.centerRight,
-              child: TextButton(
-                onPressed: () {
-                  // Navigator.push(context, MaterialPageRoute(
-                  //   builder: (context) =>
-                  //   ));
-                },
-                child: const Text("Skip Here!",
-                    style: TextStyle(
-                      color: Colors.black54,
-                      fontSize: 20,
-                    )),
-              )),
-          const SizedBox(height: 50),
+          const SizedBox(height: 70),
           Padding(
             padding: const EdgeInsets.all(20),
             child: Image.asset("images/UI Design.png"),
@@ -64,7 +50,7 @@ class WelcomeScreen extends StatelessWidget {
                 child: InkWell(
                   onTap: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => const LoginScreen()));
+                        MaterialPageRoute(builder: (context) => LoginScreen()));
                   },
                   child: const Padding(
                     padding: EdgeInsets.symmetric(vertical: 15, horizontal: 40),
@@ -87,7 +73,7 @@ class WelcomeScreen extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const SignUpScreen()));
+                            builder: (context) => SignUpScreen()));
                   },
                   child: const Padding(
                     padding: EdgeInsets.symmetric(vertical: 15, horizontal: 40),

@@ -119,7 +119,8 @@ class _ConvertMoneyPageState extends State<ConvertMoneyPage> {
       builder: (BuildContext context) {
         return AlertDialog(
           title: const Text('Conversion Result'),
-          content: Text('Result: $result ${selectedToCurrency == 'Euro' ? 'Euro' : 'IDR'}'),
+          content: Text(
+              'Result: $result ${selectedToCurrency == 'Euro' ? 'Euro' : 'IDR'}'),
           actions: [
             TextButton(
               onPressed: () {

@@ -8,7 +8,8 @@ class HistoryPage extends StatefulWidget {
 }
 
 class _HistoryPageState extends State<HistoryPage> {
-  String dataFromDetailPage = ""; // Variabel untuk menyimpan data dari DetailPage
+  String dataFromDetailPage =
+      ""; // Variabel untuk menyimpan data dari DetailPage
 
   @override
   Widget build(BuildContext context) {
@@ -78,7 +79,7 @@ class DetailPage extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 // Kirim data kembali ke HistoryPage
-                Navigator.pop(context, 'Data dari DetailPage');
+                Navigator.pop(context, 'data has been sent...');
               },
               child: const Text('Send Data to HistoryPage'),
             ),
