@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
 class AboutScreen extends StatelessWidget {
+  const AboutScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('About Developer'),
+        title: const Text('About Developer'),
         backgroundColor: Colors.blue,
       ),
       body: Padding(
@@ -13,51 +15,51 @@ class AboutScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            CircleAvatar(
+            const CircleAvatar(
               radius: 80.0,
               backgroundImage: AssetImage('images/SAMI.jpeg'),
             ),
-            SizedBox(height: 20.0),
-            Text(
+            const SizedBox(height: 20.0),
+            const Text(
               'Henshammi Adha Fernandi',
               style: TextStyle(
                 fontSize: 24.0,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 10.0),
-            Text(
+            const SizedBox(height: 10.0),
+            const Text(
               'Flutter Developer',
               style: TextStyle(
                 fontSize: 18.0,
                 color: Colors.grey,
               ),
             ),
-            SizedBox(height: 20.0),
-            Text(
+            const SizedBox(height: 20.0),
+            const Text(
               'An experienced Flutter developer with a passion for creating innovative and responsive mobile applications.',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 16.0),
             ),
-            SizedBox(height: 20.0),
+            const SizedBox(height: 20.0),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ElevatedButton.icon(
                   onPressed: () {},
-                  icon: Icon(Icons.email),
-                  label: Text('Send Email'),
+                  icon: const Icon(Icons.email),
+                  label: const Text('Send Email'),
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.blue,
+                    backgroundColor: Colors.blue,
                   ),
                 ),
-                SizedBox(width: 10.0),
+                const SizedBox(width: 10.0),
                 ElevatedButton.icon(
                   onPressed: () {},
-                  icon: Icon(Icons.link),
-                  label: Text('Portfolio'),
+                  icon: const Icon(Icons.link),
+                  label: const Text('Portfolio'),
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.blue,
+                    backgroundColor: Colors.blue,
                   ),
                 ),
               ],

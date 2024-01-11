@@ -4,6 +4,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
+  const LoginScreen({super.key});
+
   @override
   State<LoginScreen> createState() => _LoginScreenState();
 }
@@ -18,13 +20,13 @@ class _LoginScreenState extends State<LoginScreen> {
         child: SafeArea(
           child: Column(
             children: [
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Padding(
-                padding: EdgeInsets.all(20),
+                padding: const EdgeInsets.all(20),
                 child: Image.asset("images/Web Design.png"),
               ),
-              SizedBox(height: 10),
-              Padding(
+              const SizedBox(height: 10),
+              const Padding(
                 padding: EdgeInsets.all(12),
                 child: TextField(
                   decoration: InputDecoration(
@@ -35,13 +37,13 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.all(12),
+                padding: const EdgeInsets.all(12),
                 child: TextField(
                   obscureText: passToggle ? true : false,
                   decoration: InputDecoration(
-                      border: OutlineInputBorder(),
-                      label: Text("Password"),
-                      prefixIcon: Icon(Icons.lock),
+                      border: const OutlineInputBorder(),
+                      label: const Text("Password"),
+                      prefixIcon: const Icon(Icons.lock),
                       suffixIcon: InkWell(
                         onTap: () {
                           if (passToggle == true) {
@@ -52,12 +54,12 @@ class _LoginScreenState extends State<LoginScreen> {
                           setState(() {});
                         },
                         child: passToggle
-                            ? Icon(CupertinoIcons.eye_slash_fill)
-                            : Icon(CupertinoIcons.eye_fill),
+                            ? const Icon(CupertinoIcons.eye_slash_fill)
+                            : const Icon(CupertinoIcons.eye_fill),
                       )),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.all(10),
                 child: SizedBox(
@@ -70,9 +72,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => HomeScreen()));
+                                builder: (context) => const HomeScreen()));
                       },
-                      child: Padding(
+                      child: const Padding(
                         padding:
                             EdgeInsets.symmetric(vertical: 15, horizontal: 40),
                         child: Center(
@@ -90,11 +92,11 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
+                  const Text(
                     "Don't have any account?",
                     style: TextStyle(
                       fontSize: 16,
@@ -107,9 +109,9 @@ class _LoginScreenState extends State<LoginScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => SignUpScreen()));
+                              builder: (context) => const SignUpScreen()));
                     },
-                    child: Text(
+                    child: const Text(
                       'Create here!',
                       style: TextStyle(
                         fontSize: 18,

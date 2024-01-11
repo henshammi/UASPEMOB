@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class BMIScreen extends StatefulWidget {
+  const BMIScreen({super.key});
+
   @override
   _BMIScreenState createState() => _BMIScreenState();
 }
@@ -15,7 +17,7 @@ class _BMIScreenState extends State<BMIScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('BMI Calculator'),
+        title: const Text('BMI Calculator'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -28,48 +30,48 @@ class _BMIScreenState extends State<BMIScreen> {
                 padding: const EdgeInsets.all(16.0),
                 child: Column(
                   children: [
-                    SizedBox(height: 16.0),
+                    const SizedBox(height: 16.0),
                     TextField(
                       controller: weightController,
                       keyboardType: TextInputType.number,
                       decoration:
-                          InputDecoration(labelText: 'Enter Weight (kg)'),
+                          const InputDecoration(labelText: 'Enter Weight (kg)'),
                     ),
-                    SizedBox(height: 16.0),
+                    const SizedBox(height: 16.0),
                     TextField(
                       controller: heightController,
                       keyboardType: TextInputType.number,
                       decoration:
-                          InputDecoration(labelText: 'Enter Height (cm)'),
+                          const InputDecoration(labelText: 'Enter Height (cm)'),
                     ),
-                    SizedBox(height: 16.0),
+                    const SizedBox(height: 16.0),
                     ElevatedButton(
                       onPressed: () {
                         calculateBMI();
                       },
-                      child: Text('Calculate BMI'),
+                      child: const Text('Calculate BMI'),
                     ),
                   ],
                 ),
               ),
             ),
-            SizedBox(height: 16.0),
+            const SizedBox(height: 16.0),
             Card(
               elevation: 5.0,
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Column(
                   children: [
-                    Text(
+                    const Text(
                       'Result',
                       style: TextStyle(
                         fontSize: 20.0,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    SizedBox(height: 16.0),
+                    const SizedBox(height: 16.0),
                     Text('BMI Result: $bmiResult'),
-                    SizedBox(height: 16.0),
+                    const SizedBox(height: 16.0),
                     Text('BMI Status: $bmiStatus'),
                   ],
                 ),
@@ -108,7 +110,7 @@ class _BMIScreenState extends State<BMIScreen> {
 }
 
 void main() {
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     home: BMIScreen(),
   ));
 }

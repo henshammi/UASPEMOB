@@ -3,6 +3,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CourseScreen extends StatelessWidget {
+  const CourseScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -10,37 +12,37 @@ class CourseScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: SafeArea(
           child: Padding(
-            padding: EdgeInsets.only(top: 25),
+            padding: const EdgeInsets.only(top: 25),
             child: Column(
               children: [
                 Image.asset("images/Web Design.png"),
                 Stack(
                   children: [
                     Padding(
-                      padding: EdgeInsets.symmetric(vertical: 20),
+                      padding: const EdgeInsets.symmetric(vertical: 20),
                       child: Container(
                         height: MediaQuery.of(context).size.height,
                         width: MediaQuery.of(context).size.width,
                         decoration: BoxDecoration(
                           color: Colors.grey[100],
-                          borderRadius: BorderRadius.only(
+                          borderRadius: const BorderRadius.only(
                             topLeft: Radius.circular(30),
                             topRight: Radius.circular(30),
                           ),
                         ),
                         child: Padding(
-                          padding: EdgeInsets.all(20),
+                          padding: const EdgeInsets.all(20),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
+                              const Text(
                                 "Web Design\nCourse",
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 25,
                                 ),
                               ),
-                              SizedBox(height: 20),
+                              const SizedBox(height: 20),
                               Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
@@ -55,7 +57,7 @@ class CourseScreen extends StatelessWidget {
                                   ),
                                   Row(
                                     children: [
-                                      Text(
+                                      const Text(
                                         "4.3",
                                         style: TextStyle(
                                           fontSize: 20,
@@ -71,14 +73,14 @@ class CourseScreen extends StatelessWidget {
                                   )
                                 ],
                               ),
-                              SizedBox(height: 30),
+                              const SizedBox(height: 30),
                               Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceEvenly,
                                 children: [
                                   Container(
                                     width: 100,
-                                    padding: EdgeInsets.symmetric(vertical: 10),
+                                    padding: const EdgeInsets.symmetric(vertical: 10),
                                     decoration: BoxDecoration(
                                       color: Colors.white,
                                       borderRadius: BorderRadius.circular(10),
@@ -94,7 +96,7 @@ class CourseScreen extends StatelessWidget {
                                             fontSize: 18,
                                           ),
                                         ),
-                                        Text(
+                                        const Text(
                                           "Classes",
                                           style: TextStyle(
                                             color: Colors.black,
@@ -106,7 +108,7 @@ class CourseScreen extends StatelessWidget {
                                   ),
                                   Container(
                                     width: 100,
-                                    padding: EdgeInsets.symmetric(vertical: 10),
+                                    padding: const EdgeInsets.symmetric(vertical: 10),
                                     decoration: BoxDecoration(
                                       color: Colors.white,
                                       borderRadius: BorderRadius.circular(10),
@@ -122,7 +124,7 @@ class CourseScreen extends StatelessWidget {
                                             fontSize: 18,
                                           ),
                                         ),
-                                        Text(
+                                        const Text(
                                           "Time",
                                           style: TextStyle(
                                             color: Colors.black,
@@ -134,7 +136,7 @@ class CourseScreen extends StatelessWidget {
                                   ),
                                   Container(
                                     width: 100,
-                                    padding: EdgeInsets.symmetric(vertical: 10),
+                                    padding: const EdgeInsets.symmetric(vertical: 10),
                                     decoration: BoxDecoration(
                                       color: Colors.white,
                                       borderRadius: BorderRadius.circular(10),
@@ -150,7 +152,7 @@ class CourseScreen extends StatelessWidget {
                                             fontSize: 18,
                                           ),
                                         ),
-                                        Text(
+                                        const Text(
                                           "Seats",
                                           style: TextStyle(
                                             color: Colors.black,
@@ -162,14 +164,14 @@ class CourseScreen extends StatelessWidget {
                                   ),
                                 ],
                               ),
-                              SizedBox(height: 30),
-                              Text(
+                              const SizedBox(height: 30),
+                              const Text(
                                 "Join the Web Development course, in this course, you will learn html, css, javascript, boostrap, php or java for the backend",
                                 style: TextStyle(
                                     color: Colors.black54, fontSize: 17),
                                 textAlign: TextAlign.justify,
                               ),
-                              SizedBox(height: 30)
+                              const SizedBox(height: 30)
                             ],
                           ),
                         ),
@@ -178,11 +180,11 @@ class CourseScreen extends StatelessWidget {
                     Positioned(
                       left: MediaQuery.of(context).size.width / 1.3,
                       child: Container(
-                        padding: EdgeInsets.all(12),
+                        padding: const EdgeInsets.all(12),
                         decoration: BoxDecoration(
                           color: Colors.blue[400],
                           shape: BoxShape.circle,
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               color: Colors.black12,
                               blurRadius: 6,
@@ -190,7 +192,7 @@ class CourseScreen extends StatelessWidget {
                             ),
                           ],
                         ),
-                        child: Icon(
+                        child: const Icon(
                           Icons.favorite_rounded,
                           color: Colors.white,
                           size: 30,
@@ -204,7 +206,7 @@ class CourseScreen extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: Container(
+      bottomNavigationBar: SizedBox(
         height: 80,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -220,7 +222,7 @@ class CourseScreen extends StatelessWidget {
                   border: Border.all(color: Colors.black38),
                   borderRadius: BorderRadius.circular(15),
                 ),
-                child: Icon(
+                child: const Icon(
                   CupertinoIcons.multiply,
                   color: Colors.black45,
                   size: 25,
@@ -238,9 +240,9 @@ class CourseScreen extends StatelessWidget {
                 child: InkWell(
                   onTap: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => HomeScreen()));
+                        MaterialPageRoute(builder: (context) => const HomeScreen()));
                   },
-                  child: Center(
+                  child: const Center(
                     child: Text(
                       "Join Course",
                       style: TextStyle(

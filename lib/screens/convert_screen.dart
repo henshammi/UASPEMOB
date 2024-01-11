@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ConvertMoneyPage extends StatefulWidget {
+  const ConvertMoneyPage({super.key});
+
   @override
   _ConvertMoneyPageState createState() => _ConvertMoneyPageState();
 }
@@ -19,7 +21,7 @@ class _ConvertMoneyPageState extends State<ConvertMoneyPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Money Converter'),
+        title: const Text('Money Converter'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -29,13 +31,13 @@ class _ConvertMoneyPageState extends State<ConvertMoneyPage> {
             TextFormField(
               controller: amountController,
               keyboardType: TextInputType.number,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: 'Enter Amount',
                 border: OutlineInputBorder(),
                 contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
               ),
             ),
-            SizedBox(height: 16.0),
+            const SizedBox(height: 16.0),
             Row(
               children: [
                 Expanded(
@@ -56,7 +58,7 @@ class _ConvertMoneyPageState extends State<ConvertMoneyPage> {
                     },
                   ),
                 ),
-                SizedBox(width: 16.0),
+                const SizedBox(width: 16.0),
                 Expanded(
                   child: DropdownButton<String>(
                     value: selectedToCurrency,
@@ -77,12 +79,12 @@ class _ConvertMoneyPageState extends State<ConvertMoneyPage> {
                 ),
               ],
             ),
-            SizedBox(height: 16.0),
+            const SizedBox(height: 16.0),
             ElevatedButton(
               onPressed: () {
                 convertCurrency();
               },
-              child: Text('Convert'),
+              child: const Text('Convert'),
             ),
           ],
         ),
@@ -116,14 +118,14 @@ class _ConvertMoneyPageState extends State<ConvertMoneyPage> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text('Conversion Result'),
+          title: const Text('Conversion Result'),
           content: Text('Result: $result ${selectedToCurrency == 'Euro' ? 'Euro' : 'IDR'}'),
           actions: [
             TextButton(
               onPressed: () {
                 Navigator.of(context).pop();
               },
-              child: Text('OK'),
+              child: const Text('OK'),
             ),
           ],
         );

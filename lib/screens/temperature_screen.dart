@@ -7,6 +7,8 @@ enum TemperatureUnit {
 }
 
 class TemperatureConverter extends StatefulWidget {
+  const TemperatureConverter({super.key});
+
   @override
   _TemperatureConverterState createState() => _TemperatureConverterState();
 }
@@ -71,9 +73,9 @@ class _TemperatureConverterState extends State<TemperatureConverter> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Temperature Converter'),
+          title: const Text('Temperature Converter'),
           leading: IconButton(
-            icon: Icon(Icons.arrow_back),
+            icon: const Icon(Icons.arrow_back),
             onPressed: () {
               Navigator.pop(context);
             },
@@ -86,7 +88,7 @@ class _TemperatureConverterState extends State<TemperatureConverter> {
             children: [
               TextField(
                 keyboardType: TextInputType.number,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: 'Enter Temperature',
                   border: OutlineInputBorder(),
                   contentPadding: EdgeInsets.all(12),
@@ -98,7 +100,7 @@ class _TemperatureConverterState extends State<TemperatureConverter> {
                   });
                 },
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -121,7 +123,7 @@ class _TemperatureConverterState extends State<TemperatureConverter> {
                         )
                         .toList(),
                   ),
-                  Icon(Icons.arrow_forward),
+                  const Icon(Icons.arrow_forward),
                   DropdownButton<TemperatureUnit>(
                     value: resultUnit,
                     onChanged: (TemperatureUnit? value) {
@@ -143,10 +145,10 @@ class _TemperatureConverterState extends State<TemperatureConverter> {
                   ),
                 ],
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Text(
                 'Result: $resultValue ${resultUnit.toString().split('.').last}',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
             ],
           ),
@@ -157,5 +159,5 @@ class _TemperatureConverterState extends State<TemperatureConverter> {
 }
 
 void main() {
-  runApp(TemperatureConverter());
+  runApp(const TemperatureConverter());
 }

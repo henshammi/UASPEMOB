@@ -3,16 +3,18 @@ import 'package:aplikasipemob/screens/signup_screen.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeScreen extends StatelessWidget {
+  const WelcomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Material(
         child: Container(
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
-      padding: EdgeInsets.all(10),
+      padding: const EdgeInsets.all(10),
       child: Column(
         children: [
-          SizedBox(height: 15),
+          const SizedBox(height: 15),
           Align(
               alignment: Alignment.centerRight,
               child: TextButton(
@@ -21,18 +23,18 @@ class WelcomeScreen extends StatelessWidget {
                   //   builder: (context) =>
                   //   ));
                 },
-                child: Text("Skip Here!",
+                child: const Text("Skip Here!",
                     style: TextStyle(
                       color: Colors.black54,
                       fontSize: 20,
                     )),
               )),
-          SizedBox(height: 50),
+          const SizedBox(height: 50),
           Padding(
-            padding: EdgeInsets.all(20),
+            padding: const EdgeInsets.all(20),
             child: Image.asset("images/UI Design.png"),
           ),
-          SizedBox(height: 50),
+          const SizedBox(height: 50),
           Text(
             "Online Learning",
             style: TextStyle(
@@ -43,8 +45,8 @@ class WelcomeScreen extends StatelessWidget {
               wordSpacing: 2,
             ),
           ),
-          SizedBox(height: 10),
-          Text(
+          const SizedBox(height: 10),
+          const Text(
             "Appoint Your Teacher",
             style: TextStyle(
               color: Colors.black54,
@@ -52,7 +54,7 @@ class WelcomeScreen extends StatelessWidget {
               fontWeight: FontWeight.w500,
             ),
           ),
-          SizedBox(height: 60),
+          const SizedBox(height: 60),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -62,9 +64,9 @@ class WelcomeScreen extends StatelessWidget {
                 child: InkWell(
                   onTap: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => LoginScreen()));
+                        MaterialPageRoute(builder: (context) => const LoginScreen()));
                   },
-                  child: Padding(
+                  child: const Padding(
                     padding: EdgeInsets.symmetric(vertical: 15, horizontal: 40),
                     child: Text(
                       "Log In",
@@ -85,9 +87,9 @@ class WelcomeScreen extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => SignUpScreen()));
+                            builder: (context) => const SignUpScreen()));
                   },
-                  child: Padding(
+                  child: const Padding(
                     padding: EdgeInsets.symmetric(vertical: 15, horizontal: 40),
                     child: Text(
                       "Sign Up",

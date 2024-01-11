@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class HistoryPage extends StatefulWidget {
+  const HistoryPage({super.key});
+
   @override
   _HistoryPageState createState() => _HistoryPageState();
 }
@@ -12,28 +14,28 @@ class _HistoryPageState extends State<HistoryPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('History Page'),
+        title: const Text('History Page'),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
+            const Text(
               'Data from DetailPage:',
               style: TextStyle(fontSize: 18),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Text(
               dataFromDetailPage,
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
                 // Navigasi ke DetailPage dan tunggu data kembali
                 _navigateToDetailPage(context);
               },
-              child: Text('Go to DetailPage'),
+              child: const Text('Go to DetailPage'),
             ),
           ],
         ),
@@ -45,7 +47,7 @@ class _HistoryPageState extends State<HistoryPage> {
   _navigateToDetailPage(BuildContext context) async {
     final result = await Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => DetailPage()),
+      MaterialPageRoute(builder: (context) => const DetailPage()),
     );
 
     // Update dataFromDetailPage dengan data yang dikirim kembali dari DetailPage
@@ -56,27 +58,29 @@ class _HistoryPageState extends State<HistoryPage> {
 }
 
 class DetailPage extends StatelessWidget {
+  const DetailPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Detail Page'),
+        title: const Text('Detail Page'),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
+            const Text(
               'Detail Page Content',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
                 // Kirim data kembali ke HistoryPage
                 Navigator.pop(context, 'Data dari DetailPage');
               },
-              child: Text('Send Data to HistoryPage'),
+              child: const Text('Send Data to HistoryPage'),
             ),
           ],
         ),

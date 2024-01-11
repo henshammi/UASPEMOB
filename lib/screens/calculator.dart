@@ -20,7 +20,7 @@ class _CalculatorState extends State<Calculator> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Simple Calculator"),
+        title: const Text("Simple Calculator"),
       ),
       body: Padding(
         padding: const EdgeInsets.all(20),
@@ -31,9 +31,9 @@ class _CalculatorState extends State<Calculator> {
               _buildTextField("Enter first value", fieldOneController),
               _buildTextField("Enter second value", fieldTwoController),
               _buildTextField("Result", fieldThreeController),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               _buildRowOfButtons(),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               _buildClearButton(),
             ],
           ),
@@ -44,7 +44,7 @@ class _CalculatorState extends State<Calculator> {
 
   Widget _buildTextField(String labelText, TextEditingController controller) {
     return Padding(
-      padding: EdgeInsets.only(top: 20.0),
+      padding: const EdgeInsets.only(top: 20.0),
       child: TextField(
         controller: controller,
         keyboardType: TextInputType.number,
@@ -73,7 +73,7 @@ class _CalculatorState extends State<Calculator> {
   }
 
   Widget _buildOperatorButton(String operator) {
-    return Container(
+    return SizedBox(
       width: 60,
       height: 60,
       child: ElevatedButton(
@@ -81,14 +81,14 @@ class _CalculatorState extends State<Calculator> {
           _performOperation(operator);
         },
         style: ElevatedButton.styleFrom(
-          primary: Colors.blue[400],
+          backgroundColor: Colors.blue[400],
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(6),
           ),
         ),
         child: Text(
           operator,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 28,
             color: Colors.white,
           ),
@@ -98,7 +98,7 @@ class _CalculatorState extends State<Calculator> {
   }
 
   Widget _buildClearButton() {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       height: 60,
       child: ElevatedButton(
@@ -106,12 +106,12 @@ class _CalculatorState extends State<Calculator> {
           _clearFields();
         },
         style: ElevatedButton.styleFrom(
-          primary: Colors.red,
+          backgroundColor: Colors.red,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(6),
           ),
         ),
-        child: Text(
+        child: const Text(
           "Clear",
           style: TextStyle(
             fontSize: 20,

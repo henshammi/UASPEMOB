@@ -3,6 +3,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SignUpScreen extends StatefulWidget {
+  const SignUpScreen({super.key});
+
   @override
   State<SignUpScreen> createState() => _SignUpScreenState();
 }
@@ -17,13 +19,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
         child: SafeArea(
             child: Column(
           children: [
-            SizedBox(height: 0),
+            const SizedBox(height: 0),
             Padding(
-              padding: EdgeInsets.all(20),
+              padding: const EdgeInsets.all(20),
               child: Image.asset("images/Ecommerce.png"),
             ),
-            SizedBox(height: 0),
-            Padding(
+            const SizedBox(height: 0),
+            const Padding(
               padding: EdgeInsets.symmetric(vertical: 8, horizontal: 15),
               child: TextField(
                 decoration: InputDecoration(
@@ -33,7 +35,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
               ),
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.symmetric(vertical: 8, horizontal: 15),
               child: TextField(
                 decoration: InputDecoration(
@@ -43,7 +45,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
               ),
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.symmetric(vertical: 8, horizontal: 15),
               child: TextField(
                 decoration: InputDecoration(
@@ -54,13 +56,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(vertical: 8, horizontal: 15),
+              padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 15),
               child: TextField(
                 obscureText: passToggle ? true : false,
                 decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    label: Text("Password"),
-                    prefixIcon: Icon(Icons.lock),
+                    border: const OutlineInputBorder(),
+                    label: const Text("Password"),
+                    prefixIcon: const Icon(Icons.lock),
                     suffixIcon: InkWell(
                       onTap: () {
                         if (passToggle == true) {
@@ -71,12 +73,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         setState(() {});
                       },
                       child: passToggle
-                          ? Icon(CupertinoIcons.eye_slash_fill)
-                          : Icon(CupertinoIcons.eye_fill),
+                          ? const Icon(CupertinoIcons.eye_slash_fill)
+                          : const Icon(CupertinoIcons.eye_fill),
                     )),
               ),
             ),
-            SizedBox(height: 15),
+            const SizedBox(height: 15),
             Padding(
               padding: const EdgeInsets.all(10),
               child: SizedBox(
@@ -89,9 +91,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => LoginScreen()));
+                              builder: (context) => const LoginScreen()));
                     },
-                    child: Padding(
+                    child: const Padding(
                       padding:
                           EdgeInsets.symmetric(vertical: 15, horizontal: 40),
                       child: Center(
@@ -112,7 +114,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
+                const Text(
                   "Already have account?",
                   style: TextStyle(
                     fontSize: 16,
@@ -125,9 +127,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => LoginScreen()));
+                            builder: (context) => const LoginScreen()));
                   },
-                  child: Text(
+                  child: const Text(
                     'Log In here!',
                     style: TextStyle(
                       fontSize: 17,
