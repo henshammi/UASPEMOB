@@ -48,7 +48,10 @@ class AboutScreen extends StatelessWidget {
                 ElevatedButton.icon(
                   onPressed: () {},
                   icon: const Icon(Icons.email),
-                  label: const Text('Send Email'),
+                  label: const Text(
+                    'Send Email',
+                    style: TextStyle(color: Colors.blue),
+                  ),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.blue,
                   ),
@@ -57,7 +60,10 @@ class AboutScreen extends StatelessWidget {
                 ElevatedButton.icon(
                   onPressed: () {},
                   icon: const Icon(Icons.link),
-                  label: const Text('Portfolio'),
+                  label: const Text(
+                    'Portfolio',
+                    style: TextStyle(color: Colors.white),
+                  ),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.blue,
                   ),
